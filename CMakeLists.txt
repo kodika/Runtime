@@ -12,6 +12,11 @@ set(CMAKE_Swift_MODULE_DIRECTORY ${CMAKE_BINARY_DIR}/swift)
 
 include(SwiftSupport)
 
+option(BUILD_SHARED_LIBS "build shared libraries" ON)
+
+find_package(dispatch CONFIG REQUIRED)
+find_package(Foundation CONFIG REQUIRED)
+
 add_subdirectory(Sources)
 
 export(EXPORT Runtime
