@@ -49,14 +49,14 @@ add_library(Runtime
 target_compile_options(Runtime PRIVATE
   "SHELL:$<$<PLATFORM_ID:Windows>:-Xcc -D_CRT_SECURE_NO_WARNINGS>")
 
-target_include_directories(Runtime PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../CRuntime)
-
 set_target_properties(Runtime PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_Swift_MODULE_DIRECTORY})
 
 target_link_libraries(Runtime PUBLIC
   dispatch
   Foundation
+  PRIVATE
+  CRuntime
 )
 
 swift_install(TARGETS Runtime
