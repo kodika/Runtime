@@ -20,5 +20,4 @@ find_package(Foundation CONFIG REQUIRED)
 add_subdirectory(Sources)
 
 export(EXPORT Runtime
-  NAMESPACE Runtime::
-  FILE Runtime-config.cmake)
+  FILE RuntimeConfig.cmake)

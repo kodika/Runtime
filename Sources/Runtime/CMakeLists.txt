@@ -53,8 +53,8 @@ target_include_directories(Runtime PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../CRuntim
 
 set_target_properties(Runtime PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_Swift_MODULE_DIRECTORY})
-  
-target_link_libraries(Runtime
+
+target_link_libraries(Runtime PUBLIC
   dispatch
   Foundation
 )
