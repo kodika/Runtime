@@ -18,9 +18,3 @@ find_package(dispatch CONFIG REQUIRED)
 find_package(Foundation CONFIG REQUIRED)
 
 add_subdirectory(Sources)
-
-export(EXPORT Runtime
-  FILE RuntimeConfig.cmake)
-  
-export(EXPORT CRuntime
-    FILE CRuntimeConfig.cmake)
